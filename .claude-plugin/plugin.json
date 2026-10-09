@@ -1,0 +1,21 @@
+{
+  "name": "nk-clean-list",
+  "displayName": "Clean List",
+  "description": "Reconcile messy CSV or XLSX contact exports into a clean workbook, an offline HTML report, and a row-by-row JSON audit.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Nick Lian",
+    "url": "https://github.com/NickkkLian"
+  },
+  "homepage": "https://github.com/NickkkLian/nk-clean-list",
+  "repository": "https://github.com/NickkkLian/nk-clean-list",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "agent-skills",
+    "contacts",
+    "deduplication",
+    "csv",
+    "xlsx"
+  ]
+}
