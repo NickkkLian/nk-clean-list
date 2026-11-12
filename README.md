@@ -6,8 +6,10 @@ One clean contact list, with a row-by-row account of what happened. The screensh
 comes from the bundled fictional example's actual HTML report:
 
 **320 in = 251 clean + 58 merged + 9 empty + 2 not a contact** · **22 pairs to check**.
-The image was captured at 1280 × 800. On narrow screens, original-row evidence
-stacks each value under its label; all fields remain readable without sideways scrolling.
+
+Clean List is an agent skill for Claude Code and OpenAI Codex (`nk-clean-list`); its script also runs on its own.
+
+Part of [nickkk-skills](https://github.com/NickkkLian/nickkk-skills): 14 agent skills that work with numbers, check an agent's work, guard a repository, and write and present.
 
 ## Quick start
 
@@ -15,13 +17,13 @@ Requires Python 3.9 or newer. No packages, account, network access, or installat
 are needed. Start in this skill folder in a fresh copy:
 
 ```sh
-python3 scripts/clean_list.py --selftest
+git clone https://github.com/NickkkLian/nk-clean-list && cd nk-clean-list
 python3 scripts/clean_list.py --demo --out demo-output
 ```
 
 Open `demo-output/report.html` in your browser, or `demo-output/clean.xlsx` in a
 spreadsheet app. Each run creates those two files plus `demo-output/audit.json`.
-Use a new output folder each time; the tool refuses to overwrite an earlier run.
+Give each run a new output folder; earlier runs are never overwritten.
 
 For your files:
 
@@ -58,7 +60,9 @@ git clone https://github.com/NickkkLian/nk-clean-list ~/.agents/skills/nk-clean-
 - **report.html:** one self-contained page. The count and first opened merge are
   visible at a desktop viewport without scrolling. Open any other merge or pair
   to see its clean contacts and original rows. No fonts, scripts, images or data
-  are fetched from another site.
+  are fetched from another site. The screenshot at the top was captured at
+  1280 × 800; on narrow screens, original-row evidence stacks each value under its
+  label, and all fields remain readable without sideways scrolling.
 - **audit.json:** the same counts, dispositions, source references and decisions,
   plus the original source bytes and SHA-256 hashes. It contains your full input
   data, including columns that are not contact fields.
@@ -188,6 +192,14 @@ Clean List uses fixed name-and-identifier rules, needs no training, and packages
 each run as a clean workbook, an offline HTML report, and a row-by-row JSON audit
 with uncertain pairs and byte-exact source restoration. It does not claim better
 matching than dedupe.
+
+## Verify
+
+The script carries its own self-test:
+
+```sh
+python3 scripts/clean_list.py --selftest
+```
 
 ## What it does not do
 
