@@ -36,11 +36,7 @@ python3 scripts/clean_list.py contacts.csv event-signups.xlsx --out cleaned-cont
 > Read SKILL.md and use this skill to run the bundled demo into demo-output.
 > Tell me how the counts add up and where I can review the uncertain pairs.
 
-For an actual task, substitute your local filenames and a new destination. This
-explicit file-based quick start works without changing either agent's configuration.
-The skill's path note explains how agents resolve its script location. Automatic
-skill discovery depends on your agent's configured skill directories; this package
-does not change them.
+For an actual task, substitute your local filenames and a new destination.
 
 The skill is named `nk-clean-list`. To use it from any project, clone it into
 the folder where your agent looks for skills, then start a new session:
@@ -180,9 +176,8 @@ quoting, line endings, XLSX styles and formulas.
 Excel's Remove Duplicates is convenient for exact duplicates and familiar spreadsheet
 work. OpenRefine offers richer clustering choices and a reusable transformation
 history. A CRM's merge works with live records, activity history and the team's
-existing workflow. Those are useful advantages. Clean List's narrower job is an
-offline, export-level account: what was kept, what merged and why, and what still
-needs a person to decide. It does not claim better identity matching than those tools.
+existing workflow. Clean List's narrower job is an offline, export-level account:
+what was kept, what merged and why, and what still needs a person to decide.
 
 For developers, [dedupe](https://docs.dedupe.io/en/latest/) uses machine learning
 with human-labelled data to find similar records, including in very large databases.
@@ -190,8 +185,7 @@ Its documentation lists “custom data types, string comparators and blocking ru
 That makes it a better fit for developers who need trained or tailored matching.
 Clean List uses fixed name-and-identifier rules, needs no training, and packages
 each run as a clean workbook, an offline HTML report, and a row-by-row JSON audit
-with uncertain pairs and byte-exact source restoration. It does not claim better
-matching than dedupe.
+with uncertain pairs and byte-exact source restoration.
 
 ## Verify
 
